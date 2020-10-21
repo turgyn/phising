@@ -10,5 +10,5 @@ def base(request):
         pas = request.POST['password']
         user = User(email=email, pas=pas)
         user.save()
-    return render(request, 'base.html')
+    return render(request, 'index.html')
 
