@@ -1,0 +1,5 @@
+<form method="post" class='row' action="{% url 'base' %}"> {% csrf_token %}
+    <input type="email" name="email">
+    <input type="password" name="password">
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
