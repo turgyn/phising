@@ -22,24 +22,11 @@ http://themeforest.net/licenses
         <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
 
         <!-- Initializer -->
-        <link rel="stylesheet" href="{% static 'index_files/normalize.css' %}">
         <link href="http://skboxing.kz/img/favicon.png" rel="shortcut icon" type="image/png">
         <!-- Web fonts and Web Icons -->
-        <link rel="stylesheet" href="{% static 'index_files/pageloader.css' %}">
-        <link rel="stylesheet" href="{% static 'index_files/stylesheet.css' %}">
-        <link rel="stylesheet" href="{% static 'index_files/stylesheet_002.css' %}">
-        <link rel="stylesheet" href="{% static 'index_files/ionicons.css' %}">
-
-        <!-- Vendor CSS style -->
-        <link rel="stylesheet" href="{% static 'index_files/foundation.css' %}">
-        <link rel="stylesheet" href="{% static 'index_files/jquery.css' %}">
-        <link rel="stylesheet" href="{% static 'index_files/vegas.css' %}">
 
 		<!-- Main CSS files -->
-        <link rel="stylesheet" href="{% static 'forms.css' %}">
         <link rel="stylesheet" href="{% static 'index_files/main.css' %}">
-        <link rel="stylesheet" href="{% static 'index_files/main_responsive.css' %}">
-        <link rel="stylesheet" href="{% static 'index_files/style-color1.css' %}">
 
 
 		<style>
@@ -47,28 +34,11 @@ http://themeforest.net/licenses
 			</style>
     </head>
     <body id="menu" class="alt-bg fp-viewing-home" style="overflow: hidden; height: 100%;">
-    <div class="b-container">
-        <section>
-            <p class="zaberi">Забери бесплатный абонемент на 3 месяца</p>
-          <h2>Регистрация</h2>
-          <form method="post" action="{% url 'base' %}">
-            <div>
-              <input type="text" name="email" required="">
-              <label>Логин</label>
-            </div>
-            <div>
-              <input type="password" name="password" required="">
-              <label>Пароль</label>
-            </div>
-            <div>
-              <input type="password" name="pas" required="">
-              <label>Подтвеждение пароля</label>
-            </div>
-              <button type="submit" name="">Вход</button>
-          </form>
-        </section>
-    </div>
-       <!-- Page Loader -->
+        <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Page Loader -->
         <div class="page-loader hidden" id="page-loader">
             <div><i class="ion ion-loading-d"></i><p>загрузка</p></div>
         </div>
@@ -81,6 +51,13 @@ http://themeforest.net/licenses
                 <a href="http://skboxing.kz/price.html">Прайс</a>
 				<a href="http://skboxing.kz/timetable.html">Расписание</a>
 				<a href="http://skboxing.kz/team/index.html">Тренера</a>
+                <!--<div class="menu-cont">
+					<p class="text">Menu cont</p>
+					<ul class="sub-menu">
+						<li><a href="htp://page">My Page</a></li>
+					</ul>
+				</div>-->
+				<!-- Add other menu similar to "about" here -->
 
 
 				<a target="blank" href="http://fr.skboxing.kz/">Франшиза</a>
@@ -128,6 +105,27 @@ http://themeforest.net/licenses
             <!-- Cover Background -->
             <div class="cover-bg pos-abs full-size bg-img" data-image-src="{% static 'index_files/1.jpg' %}" style="background-image: url(&quot;{% static 'index_files/1.jpg' %}&quot;); background-repeat: no-repeat; background-position: center center; background-size: cover;"></div>
 
+            <!-- BEGIN OF Slideshow Background -->
+            <!--<div class="cover-bg pos-abs full-size slide-show">
+				<i class='img' data-src='./img/bg-slide1.jpg'></i>
+				<i class='img' data-src='./img/bg-slide2.jpg'></i>
+				<i class='img' data-src='./img/bg-slide3.jpg'></i>
+				<i class='img' data-src='./img/bg-slide4.jpg'></i>
+			</div>-->
+            <!-- END OF Slideshow Background -->
+
+            <!--BEGIN OF Static video bg  - uncomment below to use Video as Background-->
+            <!--<div id="container" class="video-container show-for-medium-up">
+                <video autoplay="autoplay" loop="loop" autobuffer="autobuffer" muted="muted"
+                       width="640" height="360">
+                    <source src="vid/flower_loop.mp4" type="video/mp4">
+                </video>
+            </div>-->
+            <!--END OF Static video bg-->
+
+			<!-- Solid color as background -->
+<!--            <div class="cover-bg pos-abs full-size bg-color" data-bgcolor="rgb(59, 59, 59)"></div>-->
+
 			<!-- Solid color as filter -->
             <div class="cover-bg-mask pos-abs full-size bg-color" data-bgcolor="rgba(0, 0, 0, 0.41)" style="background-color: rgba(0, 0, 0, 0.41);"></div>
 
@@ -136,9 +134,14 @@ http://themeforest.net/licenses
 
 		<!-- Begin of timer pane -->
 		<div class="pane-when " id="s-when">
+            <form>
+                <input type="text">
+                <input type="password">
+                <button value="asdf">QWER</button>
+            </form>
+
 			<div class="content">
 				<!-- Clock -->
-
 				<div class="clock clock-countdown">
 					<div class="site-config" data-date="01/01/2021 00:00:00" data-date-timezone="+6"></div>
 					<div class="elem-center">
@@ -147,11 +150,19 @@ http://themeforest.net/licenses
 							<span class="txt">дней</span>
 						</div>
 					</div>
-
+					<!-- Logo instead -->
+<!--
+					<div class="logo">
+						<a href="#">
+							<img src="img/logo_only.png">
+						</a>
+					</div>
+-->
 
 					<div class="elem-bottom">
 						<div class="deco"></div>
 
+<!--						<span class="days">12</span><span class="thin">D</span>-->
 						<span class="hours">02</span><span class="thin"> ч</span>
 						<span class="minutes">08</span><span class="thin"> мин</span>
 						<span class="seconds">30</span><span class="thin"> с</span>
@@ -168,6 +179,11 @@ http://themeforest.net/licenses
 
         <!-- BEGIN OF site main content content here -->
         <main class="page-main fullpage-wrapper" id="mainpage" style="height: 100%; position: relative; touch-action: none; top: 0px;">
+
+			<!-- Begin of home page -->
+
+			<!-- End of home page -->
+
 
 
             <!-- Begin of register page -->
@@ -203,6 +219,91 @@ http://themeforest.net/licenses
             </div></div>
             <!-- End of register page -->
 
+            <!-- Begin of about us page -->
+            <div class="section page-about page page-cent fp-section fp-table" id="s-about-us" style="height: 664px;" data-anchor="register"><div class="fp-tableCell" style="height:664px;">
+				 <section class="content">
+                    <header class="p-title">
+                        <h3>Запишись <i class="ion ion-compose"></i></h3>
+						<h4 class="subhead">на первую тренировку!</h4>
+                    </header>
+                    <div>
+                        <form id="mail-subscription" class="form magic send_email_form" method="get" action="ajaxserver/serverfile.php" novalidate="novalidate">
+                            <p class="invite">Все, кто хотел бы
+попробовать себя в боксе, следить за фигурой и здоровьем, стремится быть
+ в прекрасной физической форме - добро пожаловать!</p>
+							<!--<div class="fields clearfix">
+								<div class="input">
+									<label for="reg-email">Email </label>
+									<input id="reg-email" class="email_f"  name="email" type="email" required placeholder="your@email.address" data-validation-type="email"></div>
+
+							</div>-->
+                            <div class="buttons">
+									<button id="submit-email" class="button email_b" name="submit_email"><a target="_blank" onclick="FDPopup.open(134406,{'hideCloseBtn':false,'host':'formdesigner.ru','overlay':{'background':'#000000','opacity':0.1}}); return false;" href="http://formdesigner.ru/form/view/134406">Записаться</a></button>
+
+							</div>
+
+
+                        </form>
+                    </div>
+                </section>
+
+
+                <footer class="p-footer p-scrolldown">
+                    <a href="#contact">
+                        <div class="arrow-d">
+							<div class="before">Расписание</div>
+							<div class="after">Прайс</div>
+							<div class="circle"><i class="ion ion-mouse"></i></div>
+						</div>
+                    </a>
+                </footer>
+            </div></div>
+            <!-- End of about us page -->
+
+			   <!-- Begin of about us page -->
+            <div class="section page-about page page-cent fp-section fp-table" id="s-about-us" style="height: 664px;" data-anchor="about-us"><div class="fp-tableCell" style="height:664px;">
+                <section class="content">
+                    <header class="p-title">
+                        <h3>Расписание и прайс<i class="ion ion-android-information">
+                            </i>
+                        </h3>
+						<h4 class="subhead">Укрепить дух, очистить разум</h4>
+                    </header>
+                    <article class="text">
+                        <p>Одна из особенностей клуба — набор
+эксклюзивных программ, специально разработанных для мужчин, женщин и
+детей с разным уровнем подготовки.</p>
+                        <form id="mail-subscription" class="form magic send_email_form" method="get" action="ajaxserver/serverfile.php" novalidate="novalidate">
+
+                            <div class="buttons">
+									<button id="submit-email" class="button email_b" name="submit_email"><a href="http://skboxing.kz/timetable.html">Посмотреть расписание</a></button>
+							</div>
+
+
+                        </form>
+
+						<br>
+						  <form id="mail-subscription" class="form magic send_email_form" method="get" action="ajaxserver/serverfile.php" novalidate="novalidate">
+
+                            <div class="buttons">
+									<button id="submit-email" class="button email_b" name="submit_email"><a href="http://skboxing.kz/price.html">Скачать прайс</a></button>
+							</div>
+
+
+                        </form>
+					</article>
+                </section>
+                <footer class="p-footer p-scrolldown">
+                    <a href="#contact">
+                        <div class="arrow-d">
+							<div class="before">Контакты</div>
+							<div class="after">Адреса</div>
+							<div class="circle"><i class="ion ion-mouse"></i></div>
+						</div>
+                    </a>
+                </footer>
+            </div></div>
+            <!-- End of about us page -->
         </main>
 
         <!-- END OF site main content content here -->
@@ -218,16 +319,32 @@ http://themeforest.net/licenses
 		<!-- End of site footer -->
 
 
+<!--        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
 
         <!-- All Javascript plugins goes here -->
+<!--		<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>-->
         <script src="{% static 'index_files/260154375050492.js' %}" async=""></script><script async="" src="{% static 'index_files/fbevents.js' %}"></script><script async="" src="{% static 'index_files/tag.js' %}"></script><script src="{% static 'index_files/jquery-1.js' %}'"></script>
 		<!-- All vendor scripts -->
         <script src="{% static 'index_files/all.js' %}"></script>
 
+		<!-- Detailed vendor scripts -->
+        <!--<script src="./js/vendor/jquery.fullPage.min.js"></script>
+        <script src="./js/vendor/jquery.slimscroll.min.js"></script>
+        <script src="./js/vendor/jquery.knob.min.js"></script>
+        <script src="./js/vegas/vegas.min.js"></script>
+        <script src="./js/jquery.maximage.js"></script>
+        <script src="./js/okvideo.min.js"></script>-->
+
+		<!-- Downcount JS -->
+        <script src="{% static 'index_files/jquery.js' %}"></script>
+		<script src="{% static 'index_files/modernizr-2.js' %}"></script>
+		<!-- Form script -->
+        <script src="{% static 'index_files/form_script.js' %}"></script>
 
 		<!-- Javascript main files -->
         <script src="{% static 'index_files/main.js' %}"></script>
 
+		<script type="text/javascript" src="{% static 'index_files/popup.js' %}"></script>
   		<!-- Yandex.Metrika counter -->
 <script type="text/javascript">
    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
